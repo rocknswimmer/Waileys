@@ -4,14 +4,14 @@ use waileys;
 
 CREATE TABLE runners (
   runner_id int primary key auto_increment,
-  runner VARCHAR(100) NOT NULL DEFAULT NULL,
-  pace REAL NOT NULL DEFAULT NULL
+  runner VARCHAR(100) NOT NULL,
+  pace REAL NOT NULL
 );
 
 CREATE TABLE legs (
   leg_id int primary key auto_increment,
   runner_id int not null,
-  distance REAL NOT NULL DEFAULT NULL,
+  distance REAL NOT NULL,
   complete BOOLEAN NOT NULL DEFAULT false,
   start_time VARCHAR(50) NOT NULL DEFAULT 'TBD',
   end_time VARCHAR(50) NOT NULL DEFAULT 'TBD',
