@@ -2,6 +2,7 @@ package waileys.data;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import waileys.data.mappers.RunnerMapper;
 import waileys.models.Runner;
 
 import java.util.List;
@@ -16,11 +17,16 @@ public class RunnerJdbcTemplateRepository implements RunnerRepository {
 
     @Override
     public List<Runner> findAll() {
-        return List.of();
+        final String sql = "select id as runner_id, runner as runner_name, pace from runners;";
+
+        return jdbcTemplate.query(sql, new RunnerMapper());
     }
 
     @Override
     public Runner findById(int runnerId) {
-        return null;
+        final String sql = "select id as runner_id, runner as runner_name, pace from runners where id = ?;";
+
+        return jdbcTemplate.query(sql, new RunnerMapper(), runnerId).stream()
+                .findFirst().orElse(null);
     }
 }
