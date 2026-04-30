@@ -24,7 +24,20 @@ CREATE TABLE legs (
   references runners(runner_id)
 );
 
-insert into runners (runner, pace) values ('And e', 10);
+delimiter //
+create procedure set_known_good_state()
+begin
+
+    delete from legs;
+    alter table legs auto_increment = 1;
+    delete from runners;
+    alter tabel runners auto_increment = 1;
 
 
-insert into legs (runner_id, distance) values (1, 3.1);
+    insert into runners (runner, pace) values ('And e', 10);
+
+
+    insert into legs (runner_id, distance) values (1, 3.1);
+
+end //
+delimiter ;
