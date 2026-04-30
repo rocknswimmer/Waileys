@@ -20,7 +20,7 @@ class RunnerJdbcTemplateRepositoryTest {
 
     @BeforeEach
     void setup(){
-        KnownGoodState.set();
+        knownGoodState.set();
     }
 
     @Test

@@ -31,7 +31,7 @@ begin
     delete from legs;
     alter table legs auto_increment = 1;
     delete from runners;
-    alter tabel runners auto_increment = 1;
+    alter table runners auto_increment = 1;
 
 
     insert into runners (runner, pace) values ('And e', 10);

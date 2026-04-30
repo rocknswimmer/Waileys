@@ -10,11 +10,11 @@ import java.sql.Connection;
 @Component
 public class KnownGoodState {
     @Autowired
-    private static JdbcTemplate jdbcTemplate;
+    private JdbcTemplate jdbcTemplate;
 
     private boolean hasRun = false;
 
-    public static void set() {
+    public void set() {
         jdbcTemplate.execute((Connection conn) -> {
             try (CallableStatement cs = conn.prepareCall("call set_known_good_state()")) {
                 return cs.execute();
