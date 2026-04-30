@@ -17,14 +17,14 @@ public class RunnerJdbcTemplateRepository implements RunnerRepository {
 
     @Override
     public List<Runner> findAll() {
-        final String sql = "select id as runner_id, runner as runner_name, pace from runners;";
+        final String sql = "select runner_id, runner as runner_name, pace from runners;";
 
         return jdbcTemplate.query(sql, new RunnerMapper());
     }
 
     @Override
     public Runner findById(int runnerId) {
-        final String sql = "select id as runner_id, runner as runner_name, pace from runners where id = ?;";
+        final String sql = "select runner_id, runner as runner_name, pace from runners where id = ?;";
 
         return jdbcTemplate.query(sql, new RunnerMapper(), runnerId).stream()
                 .findFirst().orElse(null);
