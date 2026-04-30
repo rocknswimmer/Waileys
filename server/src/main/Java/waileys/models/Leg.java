@@ -1,4 +1,4 @@
-package Waileys.models;
+package waileys.models;
 
 public class Leg {
     private int legId;
