@@ -2,7 +2,7 @@ package waileys.models;
 
 public class Leg {
     private int legId;
-    private int runnerId;
+    private int runnerId;//change to name and add pace?
     private float distance;
     private boolean complete;
     private String differance;
