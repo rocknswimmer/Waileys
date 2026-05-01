@@ -30,5 +30,12 @@ class RunnerJdbcTemplateRepositoryTest {
         assertTrue(runners.size() > 0);
     }
 
+    @Test
+    void shouldFindById(){
+        Runner runner = repository.findById(1);
+        assertNotNull(runner);
+        assertEquals(runner.getName(), "And e");
+    }
+
 
 }

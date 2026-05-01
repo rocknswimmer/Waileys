@@ -14,7 +14,7 @@ public class RunnerMapper implements RowMapper<Runner> {
     public Runner mapRow(ResultSet resultSet, int i) throws SQLException {
         Runner runner = new Runner();
         runner.setRunnerId(resultSet.getInt("runner_id"));
-        runner.setName("runner_name");
+        runner.setName(resultSet.getString("runner_name"));
         runner.setPace(resultSet.getFloat("pace"));
 
         return runner;

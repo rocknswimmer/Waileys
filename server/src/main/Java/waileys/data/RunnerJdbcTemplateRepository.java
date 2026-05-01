@@ -24,7 +24,7 @@ public class RunnerJdbcTemplateRepository implements RunnerRepository {
 
     @Override
     public Runner findById(int runnerId) {
-        final String sql = "select runner_id, runner as runner_name, pace from runners where id = ?;";
+        final String sql = "select runner_id, runner as runner_name, pace from runners where runner_id = ?;";
 
         return jdbcTemplate.query(sql, new RunnerMapper(), runnerId).stream()
                 .findFirst().orElse(null);
