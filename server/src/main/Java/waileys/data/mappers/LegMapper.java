@@ -13,7 +13,7 @@ public class LegMapper implements RowMapper<Leg> {
     public Leg mapRow(ResultSet resultSet, int i) throws SQLException {
         Leg leg = new Leg();
         leg.setLegId(resultSet.getInt("leg_id"));
-        leg.setRunnerId(resultSet.getInt("runner_id"));
+        leg.setRunnerId(resultSet.getInt("runner_id"));//would need to change and add here too
         leg.setDistance(resultSet.getFloat("distance"));
         leg.setComplete(resultSet.getBoolean("complete"));
         leg.setDifferance(resultSet.getString("dif"));
