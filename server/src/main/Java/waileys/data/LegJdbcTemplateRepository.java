@@ -16,6 +16,7 @@ public class LegJdbcTemplateRepository implements LegRepository{
 
     @Override
     public List<Leg> findAll() {
+        //the function that is causing me to evaluate what I  am doing while converting
         return List.of();
     }
 
