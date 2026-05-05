@@ -4,7 +4,7 @@ function App() {
 
   return (
     <div>
-      <h1>Site Title</h1>
+      <h1>Waileys</h1>
     </div>
   )
 }
