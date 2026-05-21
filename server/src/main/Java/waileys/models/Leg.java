@@ -14,7 +14,7 @@ public class Leg {
     private String pacific_end;
 
     //constructor?
-    //spring challenge/ refactoring for more complex solution and hitting bumps
+    //spring challenge/ made it to silver league now i gotta avoid water
 
     public int getLegId() {
         return legId;
