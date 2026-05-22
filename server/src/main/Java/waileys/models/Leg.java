@@ -14,7 +14,7 @@ public class Leg {
     private String pacific_end;
 
     //constructor?
-    //spring challenge/ made it to silver league now i gotta avoid water
+    //spring challenge/ made it to silver league last time was bronze
 
     public int getLegId() {
         return legId;
