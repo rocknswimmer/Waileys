@@ -14,7 +14,7 @@ public class Leg {
     private String pacific_end;
 
     //constructor?
-    //spring challenge/ finished in gold
+
 
     public int getLegId() {
         return legId;
