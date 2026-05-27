@@ -12,4 +12,4 @@ function App() {
 export default App;
 //finally processed
 
-//spring challenge wood league 2 clear 1 introduces other goblins
+//registration part 2
