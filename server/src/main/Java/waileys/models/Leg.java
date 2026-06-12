@@ -13,7 +13,7 @@ public class Leg {
     private String pacific_start;
     private String pacific_end;
 
-    //constructor?
+    //constructor?fake int
 
     public int getLegId() {
         return legId;
