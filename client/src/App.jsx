@@ -10,4 +10,4 @@ function App() {
 }
 
 export default App;
-//finally processed
+//finally
