@@ -17,7 +17,6 @@ public class Leg {
 
 
 
-
     public int getLegId() {
         return legId;
     }
