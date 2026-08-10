@@ -15,6 +15,8 @@ public class Leg {
 
     //constructor?
 
+
+
     public int getLegId() {
         return legId;
     }
